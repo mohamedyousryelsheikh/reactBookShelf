@@ -6,9 +6,9 @@ const Book = (props) => {
      return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${props.imageSrc})` }}></div>
+                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${props.imageSrc})` }}>{(props.imageSrc)?'':<span style={{display:'block',margin:'75px auto',textAlign:'center'}}>no cover image</span>}</div>
                     <ShelfMenu
-                        menuOptions={props.thisBook.shelf}
+                        menuOptions={props.shelf}
                         allCategories={props.allCategories}
                         handleShelfChange={props.handleShelfChange}
                         thisBook={props.thisBook}

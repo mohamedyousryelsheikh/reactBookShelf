@@ -16,6 +16,7 @@ class ShelfMenu extends React.Component {
     render() {
         return (
             <div className="book-shelf-changer">
+            
             <select onChange={this.changeShelf}>
             
                     <option value="none" disabled>Move to...</option>
@@ -25,7 +26,9 @@ class ShelfMenu extends React.Component {
                     <option value="none">None</option>
                 </select>
             </div>
+            
         );
+        
     }
 }
 ShelfMenu.defaultProps = {
